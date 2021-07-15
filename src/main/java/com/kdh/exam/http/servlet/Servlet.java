@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Servlet")
+@WebServlet("/usr/home/main")
 public class Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //		파라미터 인코딩 UTF-8
@@ -19,7 +19,7 @@ public class Servlet extends HttpServlet {
 //		HTML이 UTF-8 인코딩이라는 것을 브라우저에게 전달한다
 		resp.setContentType("text/html; charset=UTF-8");
 
-		RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/usr/article/write.jsp");
+		RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/usr/home/main.jsp");
 		requestDispatcher.forward(req, resp);
 	}
 
